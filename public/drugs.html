@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <link rel="stylesheet" href="FormStylesheet.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+        <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+ 
+    </head>
+    <body>
+        <h3 style="font-size: 30px; color: rgb(219, 46, 104);">Live better, together</h3>
+        <p style="color: rgb(109, 107, 107);">Learn more about what's affecting your health so you can take<br>action, while helping others learn from your real-world<br>experiences.</p>
+        <fieldset>
+        <legend style="font-size: 30px; color: rgb(219, 46, 104);"><b>Share a few basics</b></legend>
+        <p style="color: rgb(109, 107, 107);">Find other people like you and start adding your to real-time<br>research.</p>
+        <br>
+
+        <div>
+        <form action="/action_page.php">
+        <label for="aname">Age</label>
+        <br>
+        <input type="age" id="aname" name="aname">
+        <br>
+        <p>Sex</p>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <br>
+        <br>
+        <label for="user_state">Select your State</label>
+            <br>
+            <div><div class="custom-select-wrapper"><select name="user[state]" id="user_state">
+            <option value="Andaman and Nicobar Island">Andaman and Nicobar Island</option>
+            <option value="Chandigarh">Chandigarh</option>
+            <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+            <option value="Daman and Diu">Daman and Diu</option>
+            <option value="Lakshadweep">Lakshadweep</option>
+            <option value="Delhi (National Capital Territory)">Delhi (National Capital Territory)</option>
+            <option value="Puducherry (Pondicherry)">Puducherry (Pondicherry)</option>
+            <option disabled="disabled" value="">-----</option>
+            <option value="United States">Andhra Pradesh</option>
+            <option value="Canada">Arunachal Pradesh</option>
+            <option value="United Kingdom">Assam</option>
+            <option value="Afghanistan">Bihar</option>
+            <option value="Aland Islands">Chhattisgarh</option>
+            <option value="Goa">Goa</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="American Samoa">Haryana</option>
+            <option value="Himachal Pradesh">Himachal Pradesh</option>
+            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+            <option value="Jharkhand">Jharkhand</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Manipur">Manipur</option>
+            <option value="Meghalaya">Meghalaya</option>
+            <option value="Mizoram">Mizoram</option>
+            <option value="Nagaland">Nagaland</option>
+            <option value="Odisha">Odisha</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Sikkim">Sikkim</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Tripura">Tripura</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="Uttarakhand">Uttarakhand</option>
+            <option value="West Bengal">West Bengal</option>
+            </select>
+            </div>
+            </div>
+        <br>
+        <br>
+        <label for="user_militarystatus">Select your Military Status</label>
+        <br>
+        <div><div class="custom-select-wrapper"><select id="user_militarystatus" name="user[militarystatus]">
+        <option value="i haven't served in the military">I haven't served in the military</option>
+        <option value="i'm currently serving">I'm currently serving</option>
+        <option value="i previously served">I previously served</option>
+        <option value="i prefer not to answer">I prefer not to answer</option>
+        </select>
+        </div>
+        </div>
+        <br>
+        <br>
+        <label for="user_ethnicity">Ethnicity</label>
+        <br>
+        <div><div class="custom-select-wrapper"><select id="user_ethnicity" name="user[ethnicity]">
+        <option value="i am hispanic or latino">I am Hispanic or Latino</option>
+        <option value="i am not hispanic or latino">I am not Hispanic or Latino</option>
+        <option value="i prefer not to answer">I prefer not to answer</option>
+        </select>
+        </div>
+        </div>
+        <br>
+        <br>
+        <label for="user_race">Race</label>
+        <br>
+        <div><div class="custom-select-wrapper"><select id="user_race" name="user[race]">
+        <option value="white">White</option>
+        <option value="black or african american">Black or African American</option>
+        <option value="asian">Asian</option>
+        <option value="native hawaiian or other pacific islander">Native Hawaiian or other Pacific Islander</option>
+        <option value="american indian or alaskan native">American Indian or Alaskan Native</option>
+        <option value="mixed race">Mixed Race</option>
+        <option value="i prefer not to answer">I prefer not to answer</option>
+        </select>
+        </div>
+        </div>
+        <br>
+        <br>
+        <h2 style="color: rgb(219, 46, 104); font-size: 25px;">Start building your health profile</h2>
+        <p style="color: rgb(109, 107, 107);">Learn more about what's affecting your health and help others learn<br>from your real-world experiences.</p>
+        
+        
+            <legend>Other medications you're taking for any condition</legend>
+
+           <!--Make sure the form has the autocomplete function switched off:-->
+<form autocomplete="off" action="/action_page.php">
+    <div class="autocomplete" style="width:300px;">
+      <input id="myInput" type="text" name="mySuggestions" placeholder="Start typing to see suggestions">
+    </div>
+  </form>
+  
+  <script>
+  function autocomplete(inp, arr) {
+    /*the autocomplete function takes two arguments,
+    the text field element and an array of possible autocompleted values:*/
+    var currentFocus;
+    /*execute a function when someone writes in the text field:*/
+    inp.addEventListener("input", function(e) {
+        var a, b, i, val = this.value;
+        /*close any already open lists of autocompleted values*/
+        closeAllLists();
+        if (!val) { return false;}
+        currentFocus = -1;
+        /*create a DIV element that will contain the items (values):*/
+        a = document.createElement("DIV");
+        a.setAttribute("id", this.id + "autocomplete-list");
+        a.setAttribute("class", "autocomplete-items");
+        /*append the DIV element as a child of the autocomplete container:*/
+        this.parentNode.appendChild(a);
+        /*for each item in the array...*/
+        for (i = 0; i < arr.length; i++) {
+          /*check if the item starts with the same letters as the text field value:*/
+          if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+            /*create a DIV element for each matching element:*/
+            b = document.createElement("DIV");
+            /*make the matching letters bold:*/
+            b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+            b.innerHTML += arr[i].substr(val.length);
+            /*insert a input field that will hold the current array item's value:*/
+            b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+            /*execute a function when someone clicks on the item value (DIV element):*/
+            b.addEventListener("click", function(e) {
+                /*insert the value for the autocomplete text field:*/
+                inp.value = this.getElementsByTagName("input")[0].value;
+                /*close the list of autocompleted values,
+                (or any other open lists of autocompleted values:*/
+                closeAllLists();
+            });
+            a.appendChild(b);
+          }
+        }
+    });
+    /*execute a function presses a key on the keyboard:*/
+    inp.addEventListener("keydown", function(e) {
+        var x = document.getElementById(this.id + "autocomplete-list");
+        if (x) x = x.getElementsByTagName("div");
+        if (e.keyCode == 40) {
+          /*If the arrow DOWN key is pressed,
+          increase the currentFocus variable:*/
+          currentFocus++;
+          /*and and make the current item more visible:*/
+          addActive(x);
+        } else if (e.keyCode == 38) { //up
+          /*If the arrow UP key is pressed,
+          decrease the currentFocus variable:*/
+          currentFocus--;
+          /*and and make the current item more visible:*/
+          addActive(x);
+        } else if (e.keyCode == 13) {
+          /*If the ENTER key is pressed, prevent the form from being submitted,*/
+          e.preventDefault();
+          if (currentFocus > -1) {
+            /*and simulate a click on the "active" item:*/
+            if (x) x[currentFocus].click();
+          }
+        }
+    });
+    function addActive(x) {
+      /*a function to classify an item as "active":*/
+      if (!x) return false;
+      /*start by removing the "active" class on all items:*/
+      removeActive(x);
+      if (currentFocus >= x.length) currentFocus = 0;
+      if (currentFocus < 0) currentFocus = (x.length - 1);
+      /*add class "autocomplete-active":*/
+      x[currentFocus].classList.add("autocomplete-active");
+    }
+    function removeActive(x) {
+      /*a function to remove the "active" class from all autocomplete items:*/
+      for (var i = 0; i < x.length; i++) {
+        x[i].classList.remove("autocomplete-active");
+      }
+    }
+    function closeAllLists(elmnt) {
+      /*close all autocomplete lists in the document,
+      except the one passed as an argument:*/
+      var x = document.getElementsByClassName("autocomplete-items");
+      for (var i = 0; i < x.length; i++) {
+        if (elmnt != x[i] && elmnt != inp) {
+          x[i].parentNode.removeChild(x[i]);
+        }
+      }
+    }
+    /*execute a function when someone clicks in the document:*/
+    document.addEventListener("click", function (e) {
+        closeAllLists(e.target);
+    });
+  }
+  
+  /*An array containing all the country names in the world:*/
+  var suggestions= ["Arthritis","Hypertension","Asthma","Blindness","Cancer","Chronic bronchitis","Headaches","Coronary heart disease","High cholesterol","Diabetes","Obesity","High blood pressure","Dementia","Epilepsy","head injuries","serious infections","Multiple sclerosis","Blurred vision","Muscle stiffness","Balance problems","Difficulty walking","Osteoporosis","Pagetâ€™s disease","Constant, dull bone pain","Numbness and tingling","Loss of movement in a part of the body","Parkinsonâ€™s disease","Slow movement","Stiff and inflexible muscles","Chronic kidney disease","Shortness of breath","Tiredness","Deep vein thrombosis","Fever","Shingles","Cholesterol","HIV/AIDS"];
+  
+  /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+  autocomplete(document.getElementById("myInput"), suggestions);
+  </script>
+
+
+            <p>Stay in the loop get our emails!<br>
+                You'll receive our monthly newsletter covering the latest topics that matter to patients, relevant articles<br>about your condition, plus regular reminders to help you make the most of the tools and community on<br>PatientsLikeMe!</p>
+
+                <input type="checkbox" id="agree" name="agree" value="agree">
+                <label for="agree" style="color: rgb(219, 46, 104) ; font-size: 20px;">Yes, sign me up!</label><br><br>
+                <a href="#" class="button" style="font-size: 25px;"><b>Continue</b></a>    
+       
+    </form>
+    </div>
+    </fieldset>
+    </body>
+    </html>
+
+   

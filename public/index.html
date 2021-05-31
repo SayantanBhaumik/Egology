@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<title>Egology Healthcare</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+	}
+}
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+  min-height: 100%;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color:crimson;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 105%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+h2{
+  font-size: 220%;
+    font-weight: bold;
+    color:white ;
+}
+.wrap {
+    padding: 40px;
+    text-align: center;
+}
+hr {
+    clear: both;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: 0;
+    border-top: 1px solid #aaaaaa;
+}
+h1 {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+p {
+    margin-bottom: 20px;
+}
+.btn {
+    background: #428bca;
+    border: #357ebd solid 1px;
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    padding: 8px 15px;
+    text-decoration: none;
+    text-align: center;
+    min-width: 60px;
+    position: relative;
+    transition: color .1s ease;
+}
+.btn:hover {
+    background: #357ebd;
+}
+.btn.btn-big {
+    font-size: 18px;
+    padding: 15px 20px;
+    min-width: 100px;
+}
+.btn-close {
+    color: #aaaaaa;
+    font-size: 30px;
+    text-decoration: none;
+    position: absolute;
+    right: 5px;
+    top: 0;
+}
+.btn-close:hover {
+    color: #919191;
+}
+.modal:target:before {
+    display: none;
+}
+.modal:before {
+    content:"";
+    display: block;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+}
+.modal .modal-dialog {
+    background: #fefefe;
+    border: #333333 solid 1px;
+    border-radius: 5px;
+    margin-left: -200px;
+    position: fixed;
+    left: 50%;
+    z-index: 11;
+    width: 360px;
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    -moz-transition: -moz-transform 0.3s ease-out;
+    -o-transition: -o-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    top: 20%;
+}
+.modal:target .modal-dialog {
+    top: -100%;
+    -webkit-transform: translate(0, -500%);
+    -ms-transform: translate(0, -500%);
+    transform: translate(0, -500%);
+}
+.modal-body {
+    padding: 20px;
+}
+.modal-header, .modal-footer {
+    padding: 10px 20px;
+}
+.modal-header {
+    border-bottom: #eeeeee solid 1px;
+}
+.modal-header h2 {
+    font-size: 20px;
+}
+.modal-footer {
+    border-top: #eeeeee solid 1px;
+    text-align: right;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+#logo{
+  width: 232px;
+  height:100px;
+
+}
+
+
+</style>
+<title>Egology</title>
+
+</head>
+
+<body>
+  <!-- Modal -->
+<div class="modal" id="modal-one" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-header">
+           <h2>Alert me if any COVID-19 positive patient comes in close proximity.</h2>
+<a href="#modal-one" class="btn-close" aria-hidden="true">×</a>
+
+      </div>
+      <div class="modal-body">
+          <p>Turn on location-service.<label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+          </label></p>
+          <p>Turn on Bluetooth.<label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+          </label></p>
+      </div>
+      <div class="modal-footer"> <a href="#modal-one" class="btn">Done.</a>
+
+      </div>
+  </div>
+</div>
+    <!-- Top menu -->
+<div class="w3-top">
+    <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+      <div class="  w3-left" ><img src="23.png" id="logo" alt="logo"></div>
+      
+    
+    </div>
+  </div>
+  <h3  class="w3-center"><b>COVID Trace</b></h3>
+  
+   
+<!-- Page Content -->
+    <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+        <div class="w3-row-padding w3-padding-32" id="disease">
+          
+            <div class="w3-col w3-center">
+                
+                <h4><b>Coronavirus risk assesment tool.</b></h4>
+               
+                  <a href="risk.html" class="w3-button w3-round-xlarge w3-wide w3-black">Am i at risk?</a> 
+                
+            </div>
+                
+            <div class="w3-col w3-center ">
+                <h4 ><b>Connect with health team & testing locations</b></h4>
+              
+                    <a href="locator.html" class="w3-button w3-round-xlarge w3-wide w3-black">Locate on map.</a> 
+                  
+            </div>
+            
+        
+        <div class="w3-col w3-center">
+            <h4><b>Contact-less medical attention</b></h4>
+           
+                <a href="videocall.html" class="w3-button w3-round-xlarge w3-wide w3-black">Video call.</a> 
+             
+
+        </div>
+        <div class="w3-col w3-center">
+          <h4><b>Home-quarintine monitoring.</b></h4>
+          
+              <a href="quarintine.html" class="w3-button w3-round-xlarge w3-wide w3-black">Track me.</a> 
+           
+
+      </div>
+       <div class="w3-col w3-center">
+          <h4><b>Your Health Map using deep learning.</b></h4>
+          
+              <a href="drugs.html" class="w3-button w3-round-xlarge w3-wide w3-black">Build my Health Map</a> 
+           
+
+      </div>
+   
+     
+       
+      </div>
+      
+<div class="w3-main" style="margin-top:43px;">
+
+  <!-- Header -->
+  <header class="w3-container" style="padding-top:22px">
+    <h5><b> How to prevent infection?</b></h5>
+  </header>
+
+  <div class="w3-row-padding w3-margin-bottom">
+    <div class="w3-quarter">
+      <div class="w3-container w3-black w3-text-white w3-padding-16">
+        <div class="w3-left"></div>
+        <div class="w3-right">
+          <h3>Self-isolation</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>staying at home.</h4>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-black w3-text-white w3-padding-16">
+        <div class="w3-left"></div>
+        <div class="w3-right">
+          <h3>2 metres</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>distance to be maintained from anyone outside of your home.</h4>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-black w3-text-white w3-padding-16">
+        <div class="w3-left"></div>
+        <div class="w3-right">
+          <h3>Avoid</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4> touching your face with unwashed hands</h4>
+      </div>
+    </div>
+   
+    <div class="w3-quarter">
+      <div class="w3-container w3-black w3-text-white w3-padding-16">
+        <div class="w3-left"></i></div>
+        <div class="w3-right">
+          <h3>Cough</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>  either into a tissue or into the crease of your elbow</h4>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-black w3-text-white w3-padding-16">
+        <div class="w3-left"></div>
+        <div class="w3-right">
+          <h3> Wash</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4> hands regularly with soap/alcohol-based sanitizer.</h4>
+      </div>
+    </div>
+  </div>
+
+      
+      
+      </div>
+    </div>
+  </div>
+
+      
+       
+					     
+					  
+				 	       
+					        
+							  
+							  
+    
+    <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+      <a href="index.html" class="w3-button w3-wide w3-round-xlarge w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top.</a>
+     
+      
+      
+      
+      <p>Made with <i class="fa fa-heartbeat" style="font-size:48px;color:crimson"></i>by Calcutta Technicity</p>
+    </footer>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/7.13.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/7.13.1/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+
+
+</body>
+
+</html>

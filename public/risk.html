@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Risk assesment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    </head>
+    <style>
+    body{
+        background:black;
+    }
+        #hr1{
+           width:100%; 
+        }
+    h1 {
+	margin-left: 15px;
+    font-size: 220%;
+    font-weight: bold;
+    color:crimson ;
+    }
+
+    #ml{
+    margin: 35px;
+    }
+
+    #logo{
+    width: 232px;
+    height:100px;
+    }
+    </style>
+
+
+<body>
+    <div class="w3-top">
+   
+      <div class="  w3-left" ><img src="23.png" id="logo" alt="logo"></div>
+      
+    
+    </div>
+    <br><br><br><br>
+    <hr id="hr1">
+<div id="ml"class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <main class="mdl-layout__content">
+        <div class="mdl-grid ohs-max-width ohs-details">
+
+            <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+                <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">COVID-19  risk assesment </h2>
+                </div>
+           
+            
+            <div class="mdl-card__supporting-text">
+            
+            <form class="w3-text-white">
+            
+               
+                <div class="singleField">
+                <label class="mdl-typography--body-2" for="age">
+                    Age
+                    <select class="mdl-typography--body-1" id="facility_name" tabindex="3">
+                        <option selected value="">Find age.</option>
+                        <option value="1">0-6</option>
+                        <option value="1">6-18</option>
+                        <option value="2">18-32</option>
+                        <option value="2">32-64</option>
+                        <option value="2">64 & above</option>
+
+                    </select>
+                </label>
+                </div>
+                <br>
+                <div class="singleField">
+                <label class="mdl-typography--body-2" for="contact">
+                 Recent encounter with anyone visiting from outside India?
+                    <select class="mdl-typography--body-1" tabindex="4">
+                        <option selected value="0">Select </option>
+                        <option value="1">Yes.</option>
+                        <option value="2">No.</option>
+                        <option value="2">Not sure.</option>
+
+                    </select>
+                </label>
+                <label class="mdl-typography--body-2" for="contact">
+                    Are you visiting from oustside India?
+                       <select class="mdl-typography--body-1" tabindex="4">
+                           <option selected value="0">Select </option>
+                           <option value="1">Yes.</option>
+                           <option value="2">No.</option>
+                           </select>
+                       <p>Upload travel visa data.</p>
+                       <input type="file" accept="image/*" capture="user"> 
+                   </label>
+                </div>
+            </div>
+            <br>
+<tr>
+                    <td ><label class="label_risk_checkbox_items mdl-typography--body-2" for="risk_checkbox_items">Suffering from anything from the list</label></td>
+                    <td colspan="3">
+                        <fieldset class="entrylist">
+                            <ul>
+                                <li>
+                                    <label id="label_riskcb1" class="label_riskcb1 mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="input_riskcb1">
+                                        <input type="checkbox" id="input_riskcb1" name="risk_checkbox_item1" class="input_riskcb1 mdl-checkbox__input">
+                                        <span class="mdl-checkbox__label w3-text-white">chronic lung disease or moderate to severe asthma.</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label id="label_riskcb2" class="label_riskcb2 mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="input_riskcb2">
+                                        <input type="checkbox" id="input_riskcb2" name="risk_checkbox_item2" class="input_riskcb2 mdl-checkbox__input">
+                                        <span class="mdl-checkbox__label w3-text-white">serious heart conditions.</span>
+                                    </label>
+                                </li>
+                                <li>
+                                <label id="label_riskcb3" class="label_riskcb3 mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="input_riskcb3">
+                                    <input type="checkbox" id="input_riskcb3" name="risk_checkbox_item3" class="input_riskcb3 mdl-checkbox__input">
+                                    <span class="mdl-checkbox__label w3-text-white"> immunocompromised including cancer treatment.</span>
+                                </label>
+                                </li>
+                                <li>
+                                    <label id="label_riskcb4" class="label_riskcb4 mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="input_riskcb4">
+                                        <input type="checkbox" id="input_riskcb4" name="risk_checkbox_item4" class="input_riskcb4 mdl-checkbox__input">
+                                        <span class="mdl-checkbox__label w3-text-white"> severe obesity (body mass index [BMI] >40).</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label id="label_riskcb5" class="label_riskcb5 mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="input_riskcb5">
+                                        <input type="checkbox" id="input_riskcb5" name="risk_checkbox_item5" class="input_riskcb5 mdl-checkbox__input">
+                                        <span class="mdl-checkbox__label w3-text-white">ill-controlled diabetes, blood-pressure. </span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label id="label_riskcb6" class="label_riskcb6 mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="input_riskcb6">
+                                        <input type="checkbox" id="input_riskcb6" name="risk_checkbox_item6" class="input_riskcb6 mdl-checkbox__input">
+                                        <span class="mdl-checkbox__label w3-text-white">pregnant.</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label id="label_riskcb7" class="label_riskcb7 mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="input_riskcb7">
+                                        <input type="checkbox" id="input_riskcb7" name="risk_checkbox_item7" class="input_riskcb7 mdl-checkbox__input">
+                                        <span class="mdl-checkbox__label w3-text-white">renal failure, or liver disease,poorly controlled HIV.</span>
+                                    </label>
+                                </li>
+                                
+                            </ul>
+                        </fieldset>
+                    </td>
+                </tr>
+                
+                                    
+                    
+                
+               
+
+            </form>
+            <br>
+            <button class="w3-button w3-wide w3-round-xlarge w3-green" onclick="myAlert()" >Submit</button>
+           </div>
+        </div>
+    </main>
+</div>
+
+
+
+
+        
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+    <a href="index.html" class="w3-button w3-wide w3-round-xlarge w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Back to home</a>
+    </footer>
+<script>
+    
+        
+function myAlert() {
+  alert("Namaste! Your risk score is: ## %");
+}
+const fileInput = document.getElementById('input-file');
+
+  fileInput.addEventListener('change', (e) => doSomethingWithFiles(e.target.files));
+   
+    </script>
+</body>
+</html>
