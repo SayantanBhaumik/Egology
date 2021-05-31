@@ -1,4 +1,4 @@
-// Generate random room name if needed
+
 if (!location.hash) {
     location.hash = Math.floor(Math.random() * 0xFFFFFF).toString(16);
   }
@@ -32,17 +32,16 @@ if (!location.hash) {
         onError(error);
       }
     });
-    // We're connected to the room and received an array of 'members'
-    // connected to the room (including us). Signaling server is ready.
+    
     room.on('members', members => {
       console.log('MEMBERS', members);
-      // If we are the second user to connect to the room we will be creating the offer
+      
       const isOfferer = members.length === 2;
       startWebRTC(isOfferer);
     });
   });
   
-  // Send signaling data via Scaledrone
+  
   function sendMessage(message) {
     drone.publish({
       room: roomName,
@@ -86,7 +85,7 @@ if (!location.hash) {
       stream.getTracks().forEach(track => pc.addTrack(track, stream));
     }, onError);
   
-    // Listen to signaling data from Scaledrone
+    
     room.on('data', (message, client) => {
       // Message was sent by us
       if (client.id === drone.clientId) {
